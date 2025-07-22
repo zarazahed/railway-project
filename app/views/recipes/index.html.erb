@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<nav>
+  <%= link_to "Home", recipes_path %> ┊
+  <%= link_to "Create new", new_recipe_path %>
+</nav>
+
+<div id="recipes">
+  <% @recipes.each do |recipe| %>
+    <%= render recipe %>
+    <p>
+      <%= link_to "Show recipe", recipe, class: "btn" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Create new", new_recipe_path, class: "btn" %>

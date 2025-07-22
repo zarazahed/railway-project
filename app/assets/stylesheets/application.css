@@ -1,0 +1,115 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+body {
+  font-family: "Verdana";
+  background-color: rgb(255, 148, 148);
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 8px;
+}
+
+h1 {
+  text-align: center;
+  color: brown;
+}
+
+h5 {
+  text-align: center;
+  color: brown;
+}
+
+p {
+  color: brown;
+}
+
+strong {
+  color: brown;
+  background-color: #fff4e6;
+}
+
+a {
+  color: brown;
+}
+
+h3 {
+  color: brown;
+}
+
+nav {
+  color: brown;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+[id^="recipe_"] {
+  background-color: #fff4e6;
+  border: 1px solid #ddd0c3;
+  padding: 30px;
+  margin-bottom: 50px;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+button {
+  background-color: #fff4e6;
+  border: 1px solid #ddd0c3;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-family: Verdana;
+  color: brown;
+  text-decoration: none;
+  display: inline-block;
+  cursor: grab;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+h2 {
+  color: brown;
+}
+
+.btn {
+  background-color: #fff4e6;
+  border: 1px solid #ddd0c3;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-family: Verdana;
+  color: brown;
+  text-decoration: none;
+  display: inline-block;
+  cursor: grab;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+label {
+  color: brown;
+  margin-bottom: 20px;
+}
+
+input {
+  background-color: #fff4e6;
+  border: 1px solid #ddd0c3;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-family: Verdana;
+  color: brown;
+  text-decoration: none;
+  display: inline-block;
+  cursor: grab;
+  margin-right: 10px;
+  font-size: 15px;
+}
