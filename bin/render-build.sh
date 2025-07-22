@@ -3,6 +3,11 @@
 set -o errexit
 
 bundle install
-bin/rails assets:precompile
-bin/rails assets:clean
-bin/rails db:migrate
+yarn install --check-files
+
+
+# Precompile assets AFTER environment is loaded
+bundle exec rails assets:precompile
+
+# Run DB migrations
+bundle exec rails db:migrate
