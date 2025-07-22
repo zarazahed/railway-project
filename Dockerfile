@@ -21,9 +21,14 @@ WORKDIR /rails
 
 # Install base packages
 RUN apt-get update -qq && \
+<<<<<<< HEAD
    apt-get install --no-install-recommends -y curl libjemalloc2 libvips sqlite3 && \
    rm -rf /var/lib/apt/lists /var/cache/apt/archives/*
 
+=======
+    apt-get install --no-install-recommends -y curl libjemalloc2 libvips sqlite3 && \
+    rm -rf /var/lib/apt/lists /var/cache/apt/archives/*
+>>>>>>> bdd6f04 (Update)
 
 # Set production environment
 ENV RAILS_ENV="production" \
@@ -38,6 +43,7 @@ FROM base AS build
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
+<<<<<<< HEAD
    apt-get install --no-install-recommends -y curl gnupg && \
    curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
    apt-get install --no-install-recommends -y \
@@ -54,6 +60,22 @@ RUN apt-get update -qq && \
    rm -rf /var/lib/apt/lists/*
 
 
+=======
+    apt-get install --no-install-recommends -y curl gnupg && \
+    curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get install --no-install-recommends -y \
+      nodejs \
+      yarn \
+      build-essential \
+      git \
+      libpq-dev \
+      libyaml-dev \
+      pkg-config \
+      libssl-dev \
+      libreadline-dev \
+      zlib1g-dev && \
+    rm -rf /var/lib/apt/lists/*
+>>>>>>> bdd6f04 (Update)
 
 
 # Install application gems
@@ -70,6 +92,7 @@ COPY . .
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
+<<<<<<< HEAD
 
 ARG RAILS_MASTER_KEY
 ENV RAILS_MASTER_KEY=$RAILS_MASTER_KEY
@@ -77,7 +100,12 @@ ENV RAILS_MASTER_KEY=$RAILS_MASTER_KEY
 
 RUN RAILS_MASTER_KEY=$(cat config/master.key) SECRET_KEY_BASE=foo ./bin/rails assets:precompile
 
+=======
+ARG RAILS_MASTER_KEY
+ENV RAILS_MASTER_KEY=$RAILS_MASTER_KEY
+>>>>>>> bdd6f04 (Update)
 
+RUN RAILS_MASTER_KEY=$(cat config/master.key) SECRET_KEY_BASE=foo ./bin/rails assets:precompile
 
 
 # Final stage for app image
