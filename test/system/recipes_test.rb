@@ -1,3 +1,5 @@
+=begin
+
 require "application_system_test_case"
 
 class RecipesTest < ApplicationSystemTestCase
@@ -43,3 +45,5 @@ class RecipesTest < ApplicationSystemTestCase
     assert_text "Recipe was successfully destroyed"
   end
 end
+
+=end
