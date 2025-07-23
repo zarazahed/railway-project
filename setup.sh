@@ -15,6 +15,7 @@ export RAILS_ENV=production
 if [ -z "$SECRET_KEY_BASE" ]; then
   echo "SECRET_KEY_BASE not set, generating one."
   export SECRET_KEY_BASE=$(bin/rails secret)
+  echo "...: $SECRET_KEY_BASE"
 fi
 
 PIDS=$(timeout 2s lsof -ti ":$PORT")
