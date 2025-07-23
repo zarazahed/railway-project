@@ -12,7 +12,7 @@ class RecipesTest < ApplicationSystemTestCase
 
   test "should create recipe" do
     visit recipes_url
-    click_on "Create new"
+    click_on "Create new", match: :first
 
     fill_in "Ingredients", with: @recipe.ingredients
     fill_in "Instructions", with: @recipe.instructions
