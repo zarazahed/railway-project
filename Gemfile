@@ -17,7 +17,7 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem 'sqlite3', '>= 2.1'
+gem "sqlite3", ">= 2.1"
 
 gem "tailwindcss-rails"
 
