@@ -16,3 +16,8 @@ production:
   <<: *default
   adapter: sqlite3
   database: storage/production.sqlite3
+
+  cable:
+    <<: *default
+    adapter: sqlite3
+    database: storage/cable_production.sqlite3
