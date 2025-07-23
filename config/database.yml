@@ -15,5 +15,4 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  encoding: unicode
-  url: <%= ENV.fetch("DATABASE_URL") %>
+  database: storage/test.sqlite3
