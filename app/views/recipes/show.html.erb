@@ -6,9 +6,10 @@
   <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "btn" %>
   <%= link_to "Back to recipes", recipes_path, class: "btn" %>
 
-  <%= form_with url: recipe_path(@recipe), method: :post, class: "inline-form", data: { turbo: false } do %>
-    <%= hidden_field_tag "_method", "delete" %>
-    <%= submit_tag "Delete this recipe", data: { confirm: "Are you sure?" }, class: "btn" %>
-  <% end %>
+  <%= form_with url: recipe_path(@recipe), method: :post, local: true do %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag "_method", "delete" %>
+  <%= submit_tag "Delete this recipe", data: { confirm: "Are you sure?" }, class: "btn" %>
+<% end %>
 
   </div>
